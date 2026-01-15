@@ -1,9 +1,10 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navigation: React.FC = () => {
   const location = useLocation();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
   const links = [
     { name: 'Index', path: '/' },
@@ -43,10 +44,44 @@ const Navigation: React.FC = () => {
           </button>
         </nav>
 
-        <button className="md:hidden text-white">
-          <span className="material-symbols-outlined">menu</span>
+        <button 
+          className="md:hidden text-white p-2 hover:bg-white/5 transition-colors rounded"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span className="material-symbols-outlined">
+            {mobileMenuOpen ? 'close' : 'menu'}
+          </span>
         </button>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <nav className="md:hidden border-t border-border-dim bg-bg-main/95 backdrop-blur-sm">
+          <div className="flex flex-col px-6 py-6 space-y-1">
+            {links.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                onClick={() => setMobileMenuOpen(false)}
+                className={`text-sm font-medium uppercase tracking-widest py-4 border-b border-border-dim transition-colors ${
+                  location.pathname === link.path 
+                    ? 'text-white' 
+                    : 'text-txt-muted hover:text-white'
+                }`}
+              >
+                {link.name}
+              </Link>
+            ))}
+            <button 
+              className="text-sm font-bold uppercase tracking-widest border border-border-dim px-5 py-4 mt-4 hover:bg-white hover:text-black transition-all"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact
+            </button>
+          </div>
+        </nav>
+      )}
     </header>
   );
 };
