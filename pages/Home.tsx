@@ -38,12 +38,12 @@ const Home: React.FC = () => {
             <div className="bg-bg-surface p-8 border border-border-dim font-mono text-[11px] text-txt-muted">
               <div className="flex justify-between border-b border-border-dim pb-4 mb-4 text-white font-bold uppercase tracking-widest">
                 <span>SYSTEM_STATUS</span>
-                <span className="text-txt-muted">v2024.04</span>
+                <span className="text-txt-muted">v2026.01</span>
               </div>
               <div className="space-y-4 mono-num">
                 <div className="flex justify-between">
                   <span>Active Probes</span>
-                  <span className="text-white">04</span>
+                  <span className="text-white">03</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Research Cycles</span>
@@ -56,7 +56,7 @@ const Home: React.FC = () => {
                 <div className="h-px bg-border-dim my-2"></div>
                 <div className="flex justify-between text-txt-muted italic">
                   <span>Next Deployment</span>
-                  <span>Q3 2024</span>
+                  <span>Q2 2026</span>
                 </div>
               </div>
             </div>
@@ -94,7 +94,7 @@ const Home: React.FC = () => {
               <span className="text-[10px] font-mono text-txt-muted uppercase tracking-widest">Portfolio</span>
               <h3 className="text-2xl font-normal tracking-tight">Active Probes</h3>
             </div>
-            <span className="text-[10px] font-mono text-txt-muted mt-2 md:mt-0 uppercase tracking-widest">INDEX_REF: SYS_001-003</span>
+            <span className="text-[10px] font-mono text-txt-muted mt-2 md:mt-0 uppercase tracking-widest">INDEX_REF: VXR · ATN · WSP</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

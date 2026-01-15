@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
             Institutional research and systems architecture. Operating from distributed coordinates. Non-commercial distribution of research findings is permitted with attribution.
           </p>
           <div className="text-[10px] text-txt-muted font-mono uppercase tracking-widest">
-            © 2024 Bainaryglobe. Thinking in decades.
+            © 2026 Bainaryglobe. Thinking in decades.
           </div>
         </div>
 
